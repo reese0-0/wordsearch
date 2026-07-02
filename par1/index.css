@@ -1,0 +1,93 @@
+body {
+  background-color: #f3e4c9;
+}
+
+h1 {
+  color: #0a2947;
+  font-family: "Optima", sans-serif;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  color: #0a2947;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+}
+
+.gridContainer div {
+  border: 2px solid #0a2947;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+  cursor: crosshair;
+  user-select: none;
+}
+
+.selected {
+  background: #d3d4c0;
+}
+
+.correct {
+  background: greenyellow;
+  color: black;
+}
+
+.wrong {
+  background: red;
+  color: #d3d4c0;
+}
+
+#piaPixel {
+  width: 100px;
+  display: block;
+}
+
+#pixelBubble {
+  position: absolute;
+  width: 250px;
+  bottom: 200px;
+}
+
+.characterContainer {
+  justify-content: center;
+  top: 100px;
+}
+
+.bothContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 80px;
+  margin-left: 95px;
+}
+
+#pixelText {
+  position: absolute;
+  top: 42%;
+  left: 77%;
+  max-height: 10%;
+  overflow-y: auto;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.wordContainer {
+  border: 2px solid #0a2947;
+  padding-bottom: 24rem;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}

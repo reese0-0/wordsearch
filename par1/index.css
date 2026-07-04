@@ -17,10 +17,10 @@ h2 {
 
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  width: 500px;
-  aspect-ratio: 1;
-  flex-shrink: 0;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  width: 100%;
+  max-width: 500px;
 }
 
 .gridContainer div {
@@ -28,8 +28,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: clamp(16px, 2vw, 25px);
   font-weight: bold;
+  font-size: 25px;
   cursor: crosshair;
   user-select: none;
 }
@@ -51,54 +51,41 @@ h2 {
 #piaPixel {
   width: 100px;
   display: block;
-  z-index: 2;
 }
 
 #pixelBubble {
-  width: 100%;
-  display: block;
-}
-
-.bubbleText {
-  position: relative;
+  position: absolute;
   width: 250px;
-  left: 80px;
+  bottom: 200px;
 }
 
 .characterContainer {
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /*justify-content: center;
+  top: 100px;*/
+  max-width: 250px;
+  text-align: center;
 }
 
 .bothContainer {
   display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
-  align-items: flex-end;
   gap: 40px;
-  max-width: 1400px;
   margin: 0 auto;
-  padding: 20px;
+  max-width: 1200px;
+  /*margin-left: 95px;*/
 }
 
 #pixelText {
   position: absolute;
-
-  top: 25px;
-  left: 35px;
-
-  width: 160px;
-  height: 90px;
-
+  top: 42%;
+  left: 77%;
+  max-height: 10%;
   overflow-y: auto;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.2;
 }
 
 .leftSide {
-  width: 220px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -107,38 +94,19 @@ h2 {
 .wordContainer {
   border: 2px solid #0a2947;
   padding: 20px;
-  min-height: 300px;
+  /*padding-bottom: 24rem;*/
 }
 
 .buttonContainer {
   display: flex;
-  flex-direction: column;
   gap: 10px;
+  /*align-items: flex-start;*/
+  justify-content: center;
 }
 
-@media (max-width: 1100px) {
-  .bothContainer {
-    gap: 20px;
-  }
-
-  .gridContainer {
-    width: 400px;
-  }
-}
-
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .bothContainer {
     flex-direction: column;
     align-items: center;
-  }
-
-  .leftSide,
-  .characterContainer {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .gridContainer {
-    width: min(90vw, 400px);
   }
 }
